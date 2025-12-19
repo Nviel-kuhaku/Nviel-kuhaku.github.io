@@ -104,9 +104,17 @@
 
   <div class="footer">#dari taqi si baik hati</div>
 
-  <audio autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-funkyelement.mp3" type="audio/mpeg">
-  </audio>
+  <audio id="bgm" loop>
+  <source src="assets/audio/bernadya.mp3" type="audio/mp3">
+</audio>
+
+  <script>
+  document.addEventListener("click", function () {
+    const audio = document.getElementById("bgm");
+    audio.volume = 0.5; // biar ga kenceng
+    audio.play();
+  }, { once: true });
+  </script>
 
   <script>
     function createHearts() {
@@ -128,3 +136,4 @@
 </body>
 
 </html>
+
